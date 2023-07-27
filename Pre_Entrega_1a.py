@@ -84,7 +84,7 @@ def leer(bd):
 def guardar(bd):
     # Recibe el diccionario que registró usuario y clave
     # y lo guarda como .txt
-    ruta = "C:\\Users\\User\\PycharmProjects\\pythonCODERHOUSE\\"
+    ruta = "C:\\Users\\User\\Desktop\\"
     file = "datos.txt"
     with open(ruta + file, 'w') as f:
         for key in bd.keys():
