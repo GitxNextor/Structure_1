@@ -231,10 +231,6 @@ def whatsup(w):
             get_scsu_line(path, file, raw_data)
         case 4:
             get_tacsu_line(path, file, raw_data)
-        case _:
-            # wrong_answer
-            print(f'La opción {num} NO es válida', end='\r')
-            entrada = please_enter()
 
 
 def start():
@@ -242,41 +238,21 @@ def start():
     print('-' * 11)
     print(f'1. Pick Up Groups\n2. Hunt Groups\n3. SCSU Table\n4. TACSU Table')
 
-    wrong_input = f'La entrada no es numérica:'
+    # wrong_input = f'La entrada no es numérica:'
+    # probar con el formato anterior a f''
     farewell = f'Gracias!'
 
     entrada = welcome()
     while entrada != '':
         if entrada.isnumeric():
+            #  right answer
             num = int(entrada)
             whatsup(num)
             break
-        #     if num == 1:
-        #         # right_option
-        #         get_aun_line(path, file, raw_data)
-        #         rework_aun(aun0)
-        #         imprimir_aun(aun0)
-        #         break
-        #     if num == 2:
-        #         # right_option
-        #         get_sa_line(path, file, raw_data)
-        #         imprimir_sa(raw_data)
-        #         break
-        #     if num == 3:
-        #         # right_option
-        #         get_scsu_line(path, file, raw_data)
-        #         break
-        #     if num == 4:
-        #         # right_option
-        #         get_tacsu_line(path, file, raw_data)
-        #         break
-        #     else:
-        #         # wrong_answer
-        #         print(f'La opción {num} NO es válida', end='\r')
-        #         entrada = please_enter()
-        # else:
-        #     print(wrong_input)
-        #     entrada = please_enter()
+        else:
+            # wrong_answer
+            print(f'La opción {entrada} NO es válida', end='\r')
+            entrada = please_enter()
     else:
         print(farewell)
 
