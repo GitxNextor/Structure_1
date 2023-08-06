@@ -14,6 +14,8 @@ file = r'\Base_1_Aug_23.txt'
 
 raw_data = []
 expanded = []
+sbcsu_trimmed = []
+
 aun0 = {}
 
 colon, comma, empty = (':', ',', '')
@@ -180,9 +182,12 @@ def trim_sbcsu_line(ln_sa):
     else:
         # PEN Unpacking fo LTG, LTU, SLOT & CCT
         ltg, ltu, slot, cct = sa_lst[init_sbcsu['pen']].split('-')
-    print(sa_lst[init_sbcsu['sta']],
-          ltg.rjust(2), ltu.rjust(2), slot.rjust(2), cct.rjust(2))
-
+    # print(sa_lst[init_sbcsu['sta']],
+    #       ltg.rjust(2), ltu.rjust(2), slot.rjust(2), cct.rjust(2))
+    lista = [sa_lst[init_sbcsu['sta']], ltg, ltu, slot, cct]
+    sbcsu_trimmed.append(lista)
+    # for linea in lista:
+    print(lista)
 
 # -----------------------------------------------------------------------------
 #                              T A C S U   S N I P E T S
