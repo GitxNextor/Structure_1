@@ -11,8 +11,6 @@
 # & so I should avoid to refer file name
 from prime.prime import Prime
 import prime.constants as c
-from Structure1.prime.helpers import *
-
 from email.email import Email
 
 
