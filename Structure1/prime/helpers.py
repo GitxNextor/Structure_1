@@ -3,10 +3,10 @@
 # Functions that are going to help culculate prime numbers
 # =============================================================================
 # To add a feature that skips the calculation of primes for a specific range
-# I should add a condition based on a cuople of constants addes in constants.py
-import constants as c
+# I should add a condition based on a couple of constants added in constants.py
+# from Structure1.prime import constants as
 # from constants import *
-
+# from Structure1.prime import constants as c
 
 def is_prime(num):
     if num > 1:
@@ -19,12 +19,5 @@ def is_prime(num):
                 return False
     return True
 
-
-def calculate_primes(start, finish):
-    primes = []
-    for n in range(start, finish):
-        if is_prime(n) and n not in c.SKIP_RANGE:
-            primes.append(n)
-    return primes
 
 

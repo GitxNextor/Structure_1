@@ -1,6 +1,6 @@
 
 # =============================================================================
-# Useful variables that are going to to be used
+#             Useful variables that are going to to be used
 # =============================================================================
 
 START = 1
